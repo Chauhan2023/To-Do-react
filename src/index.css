@@ -1,0 +1,143 @@
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.todo-main {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.todo-inner{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 70vh;
+  width: 35vw;
+  background-color: white;
+  border-radius: 20px;
+}
+h1{
+  text-align: center;
+}
+.upper-part{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upper-part>input{
+  width: 50%;
+  font-size: 1.5vw;
+  outline: none;
+  background-color: transparent;
+  border-radius: 0.5vw;
+
+  /* border-bottom: 2px solid red; */
+  border: none;
+  border-bottom: 2px solid red;
+  font-weight: 500;
+  padding: 5px;
+}
+.upper-part>button{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  
+}
+.addbtn{
+  
+  transform: scale(1.5);
+  background-color: rgb(192, 191, 191);
+  color: white;
+  border-radius: 50%;
+  outline: none;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.addbtn:hover{
+  
+  background-color: greenyellow;
+}
+
+
+.lower-part>li{
+  font-weight: 500;
+  font-size: 1.5vw;
+  margin: 1vw;
+  margin-left: 2vw;
+  list-style-type: none;
+  background-color: #ffdf7c;
+  padding: 0.7vw;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.lower-part-btn>button{
+  transform: scale(1.1);
+  border: none;
+  margin: 2px;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.input{
+  width: 75%;
+  word-wrap: break-word;
+}
+
+.tick:hover{
+  color: greenyellow;
+}
+
+.cross:hover{
+  color: #ff2052;
+}
+
+
+.seprator{
+  width: 90%;
+  
+}
+.lower-part{
+  position: relative;
+  overflow-y: scroll;
+  height: 65%;
+
+
+  scrollbar-width: thin;
+}
+
+.lower-part::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+.lower-part::-webkit-scrollbar-track {
+  background: transparent; /* Track background color */
+}
+.lower-part::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371); /* Gradient background for the thumb */
+  border-radius: 8px; /* Rounded thumb */
+  border: 2px solid #fff; /* White border for contrast */
+}
+
+@media screen and (max-width:746px) {
+  .todo-inner{
+    width: 85vw;
+    height: 60vh;
+  }
+}
+@media screen and (min-width:600px) and (max-width:900px) {
+  .todo-inner{
+    width: 65vw;
+    height: 60vh;
+  }
+}
